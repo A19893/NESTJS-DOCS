@@ -6,7 +6,7 @@ import { Injectable } from '@nestjs/common';
 export class EmployeesService {
   constructor(private readonly databaseService: DatabaseService) {}
   create(createEmployeeDto: Prisma.EmployeeCreateInput) {
-    return this.databaseService.employee.create({
+    return this.databaseService.employee.create({ 
       data: createEmployeeDto
     })
   }
